@@ -117,6 +117,13 @@ PRODUCT_PACKAGES += \
     rebootcmd \
     TenderloinParts
 
+# MBM
+PRODUCT_PACKAGES += \
+	mbmd \
+	gps.tenderloin \
+	MbmService \
+	libmbm-ril
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     device/hp/tenderloin/prebuilt/usr/keychars/qwerty2.kcm.bin:system/usr/keychars/qwerty2.kcm.bin \

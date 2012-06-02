@@ -227,4 +227,24 @@ on property:init.svc.bootanim=stopped
     start thermald
     start mpdecision
 
+# MBM
+on init
+	setprop mbm.gps.config.gps_ctrl /dev/bus/usb/002/049
+	setprop mbm.gps.config.gps_nmea /dev/ttyACM2
+	setprop mbm.gps.config.gps_pref_mode PGPS
+	setprop mbm.gps.config.supl.enable_ni yes
+	setprop mbm.gps.config.supl.uncert yes
+
+	write /sys/bus/usb/devices/1-1/power/autosuspend 2
+	write /sys/bus/usb/devices/1-1/power/control auto
+	write /sys/bus/usb/devices/1-1/power/wakeup enabled
+	symlink /dev/bus/usb/002/049 /dev/cdc-wdm0
+	symlink /dev/bus/usb/002/050 /dev/cdc-wdm1
+	chown system system /dev/cdc-wdm0
+	chmod 0666 /dev/cdc-wdm0
+	chown system system /dev/cdc-wdm1
+	chmod 0666 /dev/cdc-wdm1
+	#chmod 0666 /dev/ttyACM0
+	#chmod 0666 /dev/ttyACM1
+	#chmod 0666 /dev/ttyACM2
 
