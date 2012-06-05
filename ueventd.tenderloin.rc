@@ -40,6 +40,6 @@
 /dev/ttyHS0             0600    bluetooth   bluetooth
 
 # MBM module
-/dev/ttyACM0			0660	radio		system
-/dev/ttyACM1			0660	radio		system
-/dev/ttyACM2			0660	radio		system
+/dev/ttyACM0			0660	radio		radio
+/dev/ttyACM1			0660	radio		radio
+/dev/ttyACM2			0660	radio		radio
