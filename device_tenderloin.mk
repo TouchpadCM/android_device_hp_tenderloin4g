@@ -122,7 +122,8 @@ PRODUCT_PACKAGES += \
 	mbmd \
 	gps.tenderloin \
 	MbmService \
-	libmbm-ril
+	libmbm-ril \
+	Mms
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
